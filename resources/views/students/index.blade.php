@@ -26,7 +26,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($student as $s)
+                            @foreach($Student as $s)
                             <tr>
                                 <td>{{ $s->nim }}</td>
                                 <td>{{ $s->name }}</td>

@@ -15,8 +15,32 @@ class StudentController extends Controller
     public function index()
     {
         $students = Student::all();
-        return view('students.index',['student'=>$students]);
+        return view('students.index',['Student'=>$students]);
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('students.create');
+    }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //add data
+        Student::create($request->all());
+
+        // if true, redirect to index
+        return redirect()->route('students.index')
+        ->with('success', 'Add data success!');
+    }
 }

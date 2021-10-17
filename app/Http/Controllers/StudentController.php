@@ -87,5 +87,17 @@ class StudentController extends Controller
             return redirect()->route('students.index');
         }
     }
+     /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $student = Student::find($id);
+        $student->delete();
+        return redirect()->route('students.index');
+    }
 
 }

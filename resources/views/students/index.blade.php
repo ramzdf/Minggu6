@@ -33,7 +33,7 @@
                                 <td>{{ $s->class }}</td>
                                 <td>{{ $s->department }} </td>
                                 <td>
-                                    <form action="/students/{{$s->id}}" method="post">
+                                <form action="/students/{{$s->id}}" method="post">
                                         <a href="/students/{{$s->id}}/edit" class="btn btn-warning">Edit</a>
                                         @csrf
                                         @method('DELETE')

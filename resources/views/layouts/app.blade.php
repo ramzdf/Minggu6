@@ -60,6 +60,11 @@
 
                             <li class="nav-item">
                                     <a class="nav-link" href="students">{{ __('CRUD') }}</a>
+                                    <a class="nav-link" href="{{ route('students.index') }}">{{ __('CRUD') }}</a>
+                            </li>
+
+                            <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('USER DATA') }}</a>
                             </li>
 
                             <li class="nav-item dropdown">

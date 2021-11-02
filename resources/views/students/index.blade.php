@@ -41,11 +41,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($student as $s)
+                        @foreach($student as $s)
                             <tr>
                                 <td>{{ $s->nim }}</td>
                                 <td>{{ $s->name }}</td>
-                                <td>{{ $s->class }}</td>
+                                <td>{{ $s->kelas->class_name }}</td>
                                 <td>{{ $s->department }} </td>
                                 <td>
                                 <form action="/students/{{$s->id}}" method="post">

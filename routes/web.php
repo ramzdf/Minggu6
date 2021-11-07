@@ -24,10 +24,13 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('students', StudentController::class);
+
 Route::resource('students', StudentController::class);
 
 Route::get('/search', [StudentController::class, 'search'])->name('search');
 
 Route::resource('users', UserController::class);
 
-Route::get('/search_user', [UserController::class, 'search'])->name('search_user'); 
+Route::get('/search_user', [UserController::class, 'search'])->name('search_user');
+
+Route::get('/students/{id}/report', [StudentController::class, 'report']); 

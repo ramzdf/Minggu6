@@ -64,7 +64,9 @@
                             </li>
 
                             <li class="nav-item">
+                                @can('manage-users')
                                     <a class="nav-link" href="{{ route('users.index') }}">{{ __('USER DATA') }}</a>
+                                @endcan
                             </li>
 
                             <li class="nav-item dropdown">
